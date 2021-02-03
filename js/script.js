@@ -14,7 +14,14 @@ const myMoney = 15,
     expenses1 = prompt('Введите обязательную статью расходов?'),
     amount1 = +prompt('Во сколько это обойдется?'),
     expenses2 = prompt('Введите обязательную статью расходов?'),
-    amount2 = +prompt('Во сколько это обойдется?');
+    amount2 = +prompt('Во сколько это обойдется?'),
+    accumulatedMonth = getAccumulatedMonth(),
+    period = Math.ceil(mission / accumulatedMonth),
+    budgetDay = Math.floor(accumulatedMonth / 30);
+
+function getAccumulatedMonth () {
+    return money - getExpensesMonth();
+}
 
 let showTypeOf = function (data) {
     return `${data}: ${typeof(data)}`;
@@ -36,17 +43,9 @@ let getExpensesMonth = function () {
     return amount1 + amount2;
 };
 
-let getAccumulatedMonth = function () {
-    return money - getExpensesMonth();
-};
-
 let getTargetMonth = function () {
     return Math.ceil(mission / accumulatedMonth);
 };
-
-let accumulatedMonth = getAccumulatedMonth(),
-    period = Math.ceil(mission / accumulatedMonth),
-    budgetDay = Math.floor(accumulatedMonth / 30);
 
 console.log(`${showTypeOf(myMoney)}, ${showTypeOf(income)}, ${showTypeOf(myDeposit)}`);
 console.log(getExpensesMonth());
