@@ -8,7 +8,8 @@ const income = 'фриланс',
 
 let expenses = [],
     amount,
-    money;
+    money,
+    targetMonth;
 
 
 const isNumber = function(n) {
@@ -51,7 +52,14 @@ const accumulatedMonth = getAccumulatedMonth(),
 
 
 const getTargetMonth = function () {
-    return Math.ceil(mission / accumulatedMonth);
+    targetMonth = Math.ceil(mission / accumulatedMonth);
+    
+    if (targetMonth >= 0) {
+        console.log('цель будет достигнута!')
+    } else {
+        console.log('Цель не будет достигнута');
+    }
+    return targetMonth;
 };
 
 const showTypeOf = function (data) {
