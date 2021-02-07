@@ -39,7 +39,7 @@ const getExpensesMonth = function () {
     }
 
     console.log('sum: ', sum);
-    return sum
+    return sum;
 };
 
 const getAccumulatedMonth = function () {
