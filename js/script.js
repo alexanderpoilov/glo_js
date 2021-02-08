@@ -53,18 +53,13 @@ const appData = {
 
         for(expens in appData.expenses) {
             appData.expensesMonth += appData.expenses[expens];            
-            console.log('appData.expenses[expens]: ', appData.expenses[expens]);
             
         }
-        console.log('appData.expensesMonth: ', appData.expensesMonth);
     },
 
     getBudget: function () {
         appData.budgetMonth += appData.budget - appData.expensesMonth;
         appData.budgetDay += appData.budget / 30;
-        console.log('expensesMonth: ', appData.expensesMonth);
-        console.log('appData.budgetMonth: ', appData.budgetMonth);
-
     },
 
     getTargetMonth: function () {
@@ -96,3 +91,11 @@ appData.getBudget();
 console.log('Траты в месяц: ' + appData.expensesMonth);
 console.log('Месяцев на достежение цели: ' + appData.targetMonth);
 console.log('Статус доходов: ' + appData.statusIncome);
+
+const showFunc = function(){
+    console.log('Наша программа включает в себя данные: ');
+    for(let key in appData) {
+        console.log(key + ':' + appData[key]);
+    }
+};
+showFunc();
