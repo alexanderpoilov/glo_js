@@ -52,18 +52,18 @@ const appData = {
         let expens;
 
         for(expens in appData.expenses) {
-            appData.expensesMonth += appData.expenses[expens];            
+            appData.expensesMonth = appData.expenses[expens];            
             
         }
     },
 
     getBudget: function () {
-        appData.budgetMonth += appData.budget - appData.expensesMonth;
-        appData.budgetDay += appData.budget / 30;
+        appData.budgetMonth = appData.budget - appData.expensesMonth;
+        appData.budgetDay = appData.budget / 30;
     },
 
     getTargetMonth: function () {
-        appData.targetMonth += Math.ceil(appData.mission / appData.budgetMonth);
+        appData.targetMonth = Math.ceil(appData.mission / appData.budgetMonth);
 
         if (appData.targetMonth >= 0) {
             console.log('цель будет достигнута!');
