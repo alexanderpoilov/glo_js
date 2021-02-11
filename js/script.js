@@ -1,6 +1,6 @@
 'use strict';
 
-let calculate = document.getElementById('start'),
+const calculate = document.getElementById('start'),
     buttonPlus1 = document.getElementsByTagName('button')[0],
     buttonPlus2 = document.getElementsByTagName('button')[1],
     depositCheck = document.querySelector('#deposit-check'),
