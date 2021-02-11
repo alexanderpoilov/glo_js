@@ -1,2 +1,25 @@
 'use strict';
 
+let calculate = document.getElementById('start'),
+    buttonPlus1 = document.getElementsByTagName('button')[0],
+    buttonPlus2 = document.getElementsByTagName('button')[1],
+    depositCheck = document.querySelector('#deposit-check'),
+    additionalIncomeItem = document.querySelectorAll('.additional_income-item'),
+    additionalIncomeValue = document.getElementsByClassName('additional_income-value'),
+    additionalExpensesValue = document.getElementsByClassName('additional_expenses-value'),
+    incomePeriodValue = document.getElementsByClassName('income_period-value'),
+    targetMonthValue = document.getElementsByClassName('target_month-value'),
+    budgetDayValue = document.getElementsByClassName('budget_day-value'),
+    sumMonth = document.querySelector('.salary [placeholder="Сумма"]'),
+    income = document.querySelector('.income [placeholder="Наименование"]'),
+    incomeSum = document.querySelector('.income [placeholder="Сумма"]'),
+    additionalIncome1 = document.querySelector('.additional_income [placeholder="Наименование"]')[0],
+    additionalIncome2 = document.querySelector('.additional_income [placeholder="Наименование"]')[1],
+    expenses = document.querySelector('.expenses [placeholder="Наименование"]'),
+    expensesSum = document.querySelector('.expenses [placeholder="Сумма"]'),
+    additionalExpenses = document.querySelector('.additional_expenses [placeholder="название"]'),
+    depositSum = document.querySelector('.deposit [placeholder="Сумма"]'),
+    depositPercent = document.querySelector('.deposit [placeholder="Процент"]'),
+    target = document.querySelector('.target [placeholder="Сумма"]'),
+    period = document.querySelector('.period [placeholder="range"]');
+
