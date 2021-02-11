@@ -1,25 +1,37 @@
 'use strict';
 
-const calculate = document.getElementById('start'),
-    buttonPlus1 = document.getElementsByTagName('button')[0],
-    buttonPlus2 = document.getElementsByTagName('button')[1],
-    depositCheck = document.querySelector('#deposit-check'),
-    additionalIncomeItem = document.querySelectorAll('.additional_income-item'),
-    additionalIncomeValue = document.getElementsByClassName('additional_income-value'),
-    additionalExpensesValue = document.getElementsByClassName('additional_expenses-value'),
-    incomePeriodValue = document.getElementsByClassName('income_period-value'),
-    targetMonthValue = document.getElementsByClassName('target_month-value'),
-    budgetDayValue = document.getElementsByClassName('budget_day-value'),
-    sumMonth = document.querySelector('.salary [placeholder="Сумма"]'),
-    income = document.querySelector('.income [placeholder="Наименование"]'),
-    incomeSum = document.querySelector('.income [placeholder="Сумма"]'),
-    additionalIncome1 = document.querySelector('.additional_income [placeholder="Наименование"]')[0],
-    additionalIncome2 = document.querySelector('.additional_income [placeholder="Наименование"]')[1],
-    expenses = document.querySelector('.expenses [placeholder="Наименование"]'),
-    expensesSum = document.querySelector('.expenses [placeholder="Сумма"]'),
-    additionalExpenses = document.querySelector('.additional_expenses [placeholder="название"]'),
-    depositSum = document.querySelector('.deposit [placeholder="Сумма"]'),
-    depositPercent = document.querySelector('.deposit [placeholder="Процент"]'),
-    target = document.querySelector('.target [placeholder="Сумма"]'),
-    period = document.querySelector('.period [placeholder="range"]');
+const books = document.querySelectorAll('.book'),
+    bookTwo = document.querySelectorAll('.book')[0],
+    bookTwoChapters = bookTwo.querySelectorAll('li'),
+    bookThree = document.querySelectorAll('a')[4],
+    bookFive = document.querySelectorAll('.book')[5],
+    bookFiveChapters = bookFive.querySelectorAll('li'),
+    bookSix = document.querySelectorAll('.book')[2],
+    bookSixChatters = bookSix.querySelectorAll('li'),
+    bookSixChatterEight = document.createElement('li');
+
+books[0].before(books[1]);
+books[5].after(books[2]);
+books[3].before(books[4]);
+
+document.body.style.backgroundImage = 'url(../image/you-dont-know-js.jpg)';
+
+bookThree.textContent = 'Книга 3. this и Прототипы Объектов';
+
+document.querySelector('.adv').style.display = 'none';
+
+bookTwoChapters[0].before(bookTwoChapters[1]);
+bookTwoChapters[3].after(bookTwoChapters[6]);
+bookTwoChapters[4].before(bookTwoChapters[8]);
+bookTwoChapters[10].before(bookTwoChapters[2]);
+
+bookFiveChapters[0].before(bookFiveChapters[1]);
+bookFiveChapters[2].before(bookFiveChapters[9]);
+bookFiveChapters[2].after(bookFiveChapters[3]);
+bookFiveChapters[4].after(bookFiveChapters[2]);
+bookFiveChapters[5].before(bookFiveChapters[6]);
+bookFiveChapters[5].before(bookFiveChapters[7]);
+
+bookSixChatterEight.textContent = 'Глава 8: За пределами ES6';
+bookSixChatters[8].after(bookSixChatterEight);
 
